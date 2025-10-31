@@ -1,0 +1,35 @@
+@use "colors" as *;
+
+:host,
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: auto;
+    min-height: 0;
+    padding: 8px;
+    background-color: $color-bg-card;
+    border-radius: 12px;
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+  }
+}

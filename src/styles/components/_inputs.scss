@@ -1,0 +1,23 @@
+@use "colors" as *;
+
+input,
+select {
+  padding: 8px;
+  border: 2px solid $color-bg;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+
+  &:focus {
+    border-color: $color-primary;
+    box-shadow: 0 0 0 2px $primary-alpha-40;
+  }
+
+  &.ng-dirty.ng-invalid {
+    border-color: $color-error;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $error-alpha-40;
+    }
+  }
+}

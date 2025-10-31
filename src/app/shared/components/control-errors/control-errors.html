@@ -1,0 +1,10 @@
+@if(control && control.invalid && control.dirty) { @let e = control.errors;
+@if(e?.['required']) {
+<small class="error">To pole jest wymagane.</small>
+} @if(e?.['minlength']) { @let requiredLength = e?.['minlength'].requiredLength;
+<small class="error">Minimum {{requiredLength}} znaków</small>
+} @if(e?.['maxlength']) { @let requiredLength = e?.['maxlength'].requiredLength;
+<small class="error">Maksimum {{requiredLength}} znaków</small>
+} @if(e?.['notBlank']) {
+<small class="error">Pole zawiera same spacje.</small>
+} }

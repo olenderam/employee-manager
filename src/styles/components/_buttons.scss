@@ -1,0 +1,41 @@
+@use "../colors" as *;
+
+.btn {
+  background-color: $color-primary-light;
+  color: $color-primary;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 4px 12px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-primary-light;
+    box-shadow: $border-focus;
+  }
+
+  &.btn-primary {
+    background-color: $color-primary;
+    color: $color-primary-light;
+
+    &:hover {
+      background-color: $color-primary-light;
+      color: $color-primary;
+      box-shadow: $border-focus;
+    }
+  }
+
+  &.btn-sm {
+    font-size: 12px;
+    padding: 2px 8px;
+  }
+  &.btn-md {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+  &.btn-lg {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

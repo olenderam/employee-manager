@@ -1,0 +1,40 @@
+@let firstNameCtrl = form.controls.firstName; @let lastNameCtrl =
+form.controls.lastName; @let genderCtrl = form.controls.gender;
+<form class="employee-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="controls">
+    @if(employee) {
+    <div class="row">
+      <label>Numer ewidencyjny</label>
+      <input [value]="employee.registrationNumber" disabled />
+    </div>
+    }
+    <div class="row">
+      <label>Imię</label>
+      <input formControlName="firstName" />
+      <app-control-errors [control]="firstNameCtrl"></app-control-errors>
+    </div>
+    <div class="row">
+      <label>Nazwisko</label>
+      <input formControlName="lastName" />
+      <app-control-errors [control]="lastNameCtrl"></app-control-errors>
+    </div>
+    <div class="row">
+      <label>Płeć</label>
+      <select formControlName="gender">
+        <option [ngValue]="Gender.Female">Kobieta</option>
+        <option [ngValue]="Gender.Male">Mężczyzna</option>
+        <option [ngValue]="Gender.Other">Inna płeć</option>
+      </select>
+      <app-control-errors [control]="genderCtrl"></app-control-errors>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary btn-lg" type="submit">
+      {{submitLabel}}
+    </button>
+    <button class="btn btn-lg" type="button" (click)="onCancel()">
+      Anuluj
+    </button>
+  </div>
+</form>

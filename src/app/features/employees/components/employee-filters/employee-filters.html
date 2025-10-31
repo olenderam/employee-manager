@@ -1,0 +1,8 @@
+<form class="search-filters" [formGroup]="form">
+  <label class="search-label">Wyszukaj po:</label>
+  <div class="search-fields">
+    <input type="text" formControlName="lastName" placeholder="Nazwisko" />
+    <input type="text" formControlName="firstName" placeholder="Imię" />
+    <button class="btn btn-md" (click)="clear()">Wyczyść</button>
+  </div>
+</form>

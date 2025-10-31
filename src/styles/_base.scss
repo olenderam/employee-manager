@@ -1,0 +1,22 @@
+@use "colors" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  background: $color-bg;
+  color: $color-text;
+  font-family: sans-serif;
+  padding: 16px;
+  overflow: hidden;
+}
