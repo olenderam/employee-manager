@@ -17,3 +17,12 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 ## Edit Employee View
 <img width="431" height="352" alt="image" src="https://github.com/user-attachments/assets/49cf4229-17ae-4193-9579-dbbc659dc526" />
 
+## Test Coverage
+```
+=============================== Coverage summary ===============================
+Statements   : 100% ( 119/119 )
+Branches     : 89.13% ( 41/46 )
+Functions    : 100% ( 38/38 )
+Lines        : 100% ( 114/114 )
+================================================================================
+```
