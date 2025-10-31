@@ -1,0 +1,27 @@
+@use "../colors" as *;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: $shadow-strong;
+}
+
+th,
+td {
+  padding: 16px;
+}
+
+td {
+  background-color: $color-bg-table-cell;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  background-color: $color-bg-table-header;
+}
+
+tbody {
+  background-color: $color-bg-table-body;
+}

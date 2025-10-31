@@ -1,0 +1,21 @@
+@use "colors" as *;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scroll-container {
+  width: 100%;
+  overflow: auto;
+  box-shadow: $shadow-soft;
+  border-radius: 8px;
+
+  .employee-list {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+  }
+}

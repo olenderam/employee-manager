@@ -1,0 +1,10 @@
+<header class="employees-header">
+  <h1>Lista Pracowników</h1>
+  <button class="btn btn-primary btn-lg" routerLink="/employees/new">
+    Dodaj pracownika
+  </button>
+</header>
+<app-employee-filters
+  (filtersChange)="onFiltersChange($event)"
+></app-employee-filters>
+<app-employee-list [filters$]="filters$"></app-employee-list>

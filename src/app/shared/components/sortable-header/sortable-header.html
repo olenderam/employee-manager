@@ -1,0 +1,15 @@
+<th
+  class="sortable"
+  role="button"
+  [class.active]="active === column"
+  [attr.aria-sort]="active === column ? direction === 'asc' ? 'ascending' : 'descending' : 'none'"
+  (click)="emitSort()"
+>
+  <span>{{label}}</span>
+  <span
+    class="sort-indicator"
+    [style.visibility]="active === column ? 'visible' : 'hidden'"
+  >
+    {{direction === 'asc' ? '▲': '▼' }}
+  </span>
+</th>

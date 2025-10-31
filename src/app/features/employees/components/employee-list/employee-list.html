@@ -1,0 +1,54 @@
+@let sort = (sort$ | async); @if(sort) {
+<div class="scroll-container">
+  <table class="employee-list">
+    <thead>
+      <tr>
+        <app-sortable-header
+          label="Numer ewidencyjny"
+          [column]="columns.registrationNumber"
+          [active]="sort.active"
+          [direction]="sort.direction"
+          (sort)="onSort($event)"
+        ></app-sortable-header>
+        <app-sortable-header
+          label="Nazwisko"
+          [column]="columns.lastName"
+          [active]="sort.active"
+          [direction]="sort.direction"
+          (sort)="onSort($event)"
+        ></app-sortable-header>
+        <app-sortable-header
+          label="Imię"
+          [column]="columns.firstName"
+          [active]="sort.active"
+          [direction]="sort.direction"
+          (sort)="onSort($event)"
+        ></app-sortable-header>
+        <app-sortable-header
+          label="Płeć"
+          [column]="columns.gender"
+          [active]="sort.active"
+          [direction]="sort.direction"
+          (sort)="onSort($event)"
+        ></app-sortable-header>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(employee of viewList$ | async; track employee.id;) {
+      <tr>
+        <td>{{ employee.registrationNumber }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.gender }}</td>
+        <td>
+          <button class="btn btn-md" (click)="editEmployee(employee)">
+            Edytuj
+          </button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
+}

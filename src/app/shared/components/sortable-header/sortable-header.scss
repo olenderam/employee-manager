@@ -1,0 +1,23 @@
+@use "colors" as *;
+
+:host {
+  display: contents;
+
+  th.sortable {
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    padding-right: 8px;
+
+    &:hover,
+    &.active {
+      color: $color-primary;
+    }
+
+    .sort-indicator {
+      margin-left: 4px;
+      width: 1em;
+      text-align: center;
+    }
+  }
+}
